@@ -1,0 +1,1341 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3/"
+     xml:base="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#Certificates -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#Certificates"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#Form -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#Form"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#Gallery -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#Gallery"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#Hotel_Policies -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#Hotel_Policies"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#Map -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#Map"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#Review -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#Review"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#Social_Media -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#Social_Media"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#Special_Offers -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#Special_Offers"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#Subscription -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#Subscription"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#User_Experience -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#User_Experience"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#User_Interface -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#User_Interface"/>
+    
+
+
+    <!-- http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3#Currency -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3#Currency"/>
+    
+
+
+    <!-- http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/About -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/About"/>
+    
+
+
+    <!-- http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/Contact -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/Contact"/>
+    
+
+
+    <!-- http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/Language -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/Language"/>
+    
+
+
+    <!-- http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/Reservation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/Reservation"/>
+    
+
+
+    <!-- http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/Room -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/Room"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#TL -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#TL">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3#Currency"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#about -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#about">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/About"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#about-us -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#about-us">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/About"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#about_us"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#about_us -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#about_us"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#about_us -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#about_us">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/About"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#aboutus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#aboutus -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#aboutus"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#aboutus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#aboutus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/About"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#address -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#address">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/About"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#location -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#location"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#adult -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#adult">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/Reservation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#amenities -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#amenities">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/Room"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#amenity -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#amenity">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/Room"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#ar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#ar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/Language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#arrival -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#arrival">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/Reservation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#aud -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#aud">
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#brl"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#brl -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#brl"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#bn -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#bn">
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#en"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#en -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#en"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#book -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#book">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/Reservation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#bookbutton -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#bookbutton">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/Reservation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#booking -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#booking">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/Reservation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#brl -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#brl">
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#cad"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#cad -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#cad"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#cad -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#cad">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3#Currency"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#cny"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#cny -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#cny"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#calendar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#calendar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/Reservation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#cancelicationpolicy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#cancelicationpolicy"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#cancellation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#cancellation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#Hotel_Policies"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#cancellationpolicy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#cancellationpolicy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#Hotel_Policies"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#certificate -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#certificate">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#Certificates"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#certificates -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#certificates">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#Certificates"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#chat -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#chat">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#User_Experience"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#chatbot -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#chatbot">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#User_Experience"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#check-in -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#check-in">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/Reservation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#check-out -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#check-out">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/Reservation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#checkin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#checkin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/Reservation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#checkinout-button -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#checkinout-button">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/Reservation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#checkout -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#checkout">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/Reservation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#children -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#children">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/Reservation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#cny -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#cny">
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#currency"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#currency -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#currency"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#contact-form -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#contact-form">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#Form"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#contactform"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#contactform -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#contactform"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#contactform -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#contactform">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#Form"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#cookie_policy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#cookie_policy"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#cookiepolicy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#cookiepolicy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#Hotel_Policies"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#currency -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#currency">
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#eur"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#eur -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#eur"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#datepicker -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#datepicker">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#User_Interface"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/Reservation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#de -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#de">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/Language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#departure -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#departure">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/Reservation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#description -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#description">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/Room"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#details -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#details">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/Room"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#email -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#email">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/Contact"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#mail"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#mail -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#mail"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#en -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#en">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/Language"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#es"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#es -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#es"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#es -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#es">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/Language"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#hi"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#hi -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#hi"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#eur -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#eur">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3#Currency"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#gbp"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#gbp -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#gbp"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#facebook -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#facebook">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#Social_Media"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#facilities -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#facilities">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/Room"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#facility -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#facility">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/Room"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#feature -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#feature">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/Room"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#features -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#features">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/Room"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#feedback -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#feedback">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#Form"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#feedback-form"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#feedback-form -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#feedback-form"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#feedback-form -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#feedback-form">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#Form"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#feedbackform"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#feedbackform -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#feedbackform"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#feedbackform -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#feedbackform">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#Form"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#find_btn -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#find_btn">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/Reservation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#food_policy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#food_policy"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#forecast -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#forecast">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#User_Experience"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#gallery -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#gallery">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#Gallery"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#gbp -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#gbp">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3#Currency"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#idr"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#idr -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#idr"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#googlemap -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#googlemap">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#Map"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#hi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#hi">
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#ita"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#ita -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#ita"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#hotelpolicy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#hotelpolicy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#Hotel_Policies"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#idr -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#idr">
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#inr"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#inr -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#inr"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#inr -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#inr">
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#jpy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#jpy -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#jpy"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#instagram -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#instagram">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#Social_Media"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#it -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#it">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/Language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#ita -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#ita">
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#jpy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#jpy -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#jpy"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#journal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#journal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#Subscription"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#jpy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#jpy">
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#krw"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#pt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#krw -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#krw"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#pt -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#pt"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#krw -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#krw">
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#mxn"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#mxn -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#mxn"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#linkedin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#linkedin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#Social_Media"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#location -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#location">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/About"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#mail -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#mail">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/Contact"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#map -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#map">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#Map"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#maps -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#maps">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#Map"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#mission -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#mission">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/About"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#mobile -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#mobile">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/Contact"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#phone"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#phone -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#phone"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#mxn -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#mxn">
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#rub"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#rub -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#rub"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#newsletter -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#newsletter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#Subscription"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#offer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#offer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#Special_Offers"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#offers -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#offers">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#Special_Offers"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#phone -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#phone">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/Contact"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#tel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#tel -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#tel"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#photo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#photo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/Room"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#photos -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#photos">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/Room"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#policies -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#policies">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#Hotel_Policies"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#policy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#policy -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#policy"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#policy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#policy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#Hotel_Policies"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#privacy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#privacy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#Hotel_Policies"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#privacypolicy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#privacypolicy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#Hotel_Policies"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#pt -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#pt">
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#ru"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#ru -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#ru"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#question -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#question">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#Form"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#question_form"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#question_form -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#question_form"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#question_form -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#question_form">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#Form"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#questionform"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#questionform -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#questionform"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#questionform -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#questionform">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#Form"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#reservation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#reservation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/Reservation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#reservation_form -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#reservation_form">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/Reservation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#review -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#review">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#Review"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#rezformbtn -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#rezformbtn">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/Reservation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#ru -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#ru">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/Language"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#spa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#spa -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#spa"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#rub -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#rub">
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#usd"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#usd -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#usd"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#search -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#search">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#User_Interface"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#search-bar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#search-bar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#User_Interface"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#searchbar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#searchbar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#User_Interface"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#slider -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#slider">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#User_Interface"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#spa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#spa">
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#tr"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#tr -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#tr"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#specialoffer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#specialoffer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#Special_Offers"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#subscribe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#subscribe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#Subscription"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#subscription -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#subscription"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#tel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#tel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/Contact"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#telephone"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#telephone -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#telephone"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#telephone -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#telephone">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/Contact"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#testimonials -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#testimonials">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#Review"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#tour -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#tour">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#User_Experience"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#tr -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#tr">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/Language"/>
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#ur"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#ur -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#ur"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#twitter -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#twitter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#Social_Media"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#ur -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#ur">
+        <owl:sameAs rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#zh"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#zh -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#zh"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#usd -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#usd">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3#Currency"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#video -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#video">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/Room"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#virtualtour -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#virtualtour">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#User_Experience"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#whatsapp -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#whatsapp">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/Contact"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#wheather -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#wheather">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#User_Experience"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#wheatherforecast -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#wheatherforecast">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#User_Experience"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#zh -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#zh"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
