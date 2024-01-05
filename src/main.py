@@ -3,6 +3,7 @@ import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin
 import openpyxl
+import json
 
 
 def update_dictionary(dictionary, category, element, new_value):
@@ -74,7 +75,7 @@ def update_class_map(urls, ontology, class_map):
            # for i in class_map:
             #    print("\n", i, " : ", class_map[i])
         except:
-            print(f"skipped {url}.")
+            null = 0
 
 
 def extract_data_from_excel(excel_file_path):
@@ -97,6 +98,11 @@ def extract_data_from_excel(excel_file_path):
         print("File not found. Please provide the correct path to your Excel file.")
         return {}
 
+def set_encoder(obj):
+    if isinstance(obj, set):
+        return list(obj)
+    raise TypeError(f"Object of type {obj.__class__.__name__} is not JSON serializable")
+
 
 def update_class_map_with_ratios(class_map, excel_ratios):
     for class_name, values in class_map.items():
@@ -109,10 +115,14 @@ def update_class_map_with_ratios(class_map, excel_ratios):
                 updated_value = current_value * ratio
                 updated_values.add((name, round(updated_value,2)))
         class_map[class_name] = updated_values
+   
+    json_string = json.dumps(class_map, default=set_encoder, indent=2)
 
-    return class_map
+    return json_string
 
-def return_totalValue(class_map):  
+def return_totalValue(class_map_json):  
+
+    class_map = json.loads(class_map_json)
     totalValue=0
     for i in class_map:
         for j in class_map[i]:
@@ -120,21 +130,24 @@ def return_totalValue(class_map):
     print("Total Value: ", round(totalValue,2))        
     return round(totalValue,2)
 
-target_url = "http://amorehotelistanbul.com/"
-#target_url = "amore hotel"
-urls = get_all_links(target_url)
-onto = get_ontology("deneme.rdf").load()
 
-class_map = create_class_map(onto)
-update_class_map(urls, onto, class_map)
+if __name__ == '__main__':
+    target_url = "http://amorehotelistanbul.com/"
+    urls = get_all_links(target_url)
+    onto = get_ontology("deneme.rdf").load()
 
-excel_file_path = 'grades.xlsx'
-excel_ratios = extract_data_from_excel(excel_file_path)
+    class_map = create_class_map(onto)
+    update_class_map(urls, onto, class_map)
 
-updated_class_map = update_class_map_with_ratios(class_map, excel_ratios)
+    excel_file_path = 'grades.xlsx'
+    excel_ratios = extract_data_from_excel(excel_file_path)
 
+    updated_class_map_json = update_class_map_with_ratios(class_map, excel_ratios)
 
-for i in updated_class_map:
-    print("\n", i, " : ", updated_class_map[i])
+    #updated_class_map = json.loads(updated_class_map_json)
+    # for i in updated_class_map:
+    #     print("\n", i, " : ")
+    #     for j in updated_class_map[i]:
+    #         print(j)
 
-return_totalValue(updated_class_map)
+    res = return_totalValue(updated_class_map_json)
