@@ -1,50 +1,73 @@
 import React, { useState, useEffect } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
+
+const LoadingIndicator = () => <div className="loading">Loading...</div>;
+
+const ErrorDisplay = ({ error }) => <div className="error">Error: {error.message}</div>;
+
+const TableComponent = ({ data }) => (
+  <div className='table-responsive'>
+    <h2>Data Table</h2>
+    <table className="table table-bordered table-striped">
+      <thead className="thead-dark">
+        <tr>
+          <th>Category</th>
+          <th>Subcategory</th>
+          <th>Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        {Object.keys(data).map((category) =>
+          data[category].map((subcategoryArray, index) => (
+            <tr key={index}>
+              <td>{category}</td>
+              <td>{subcategoryArray[0]}</td>
+              <td>{subcategoryArray[1]}</td>
+            </tr>
+          ))
+        )}
+      </tbody>
+    </table>
+  </div>
+);
 
 const DataTable = () => {
   const [data, setData] = useState([]);
   const [jsonData, setJsonData] = useState({});
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    // Fetch data from Flask API '/get_data' endpoint
-    fetch('http://localhost:5000/get_data')
-      .then(response => response.json())
-      .then(data => setData(data.data))
-      .catch(error => console.error('Error fetching data:', error));
+    const fetchData = async () => {
+      try {
+        const response1 = await fetch('http://localhost:5000/get_data');
+        const data = await response1.json();
+        setData(data.data);
 
-    // Fetch data from Flask API '/get_table' endpoint
-    fetch('http://localhost:5000/get_table')
-      .then(response => response.json())
-      .then(data => setJsonData(JSON.parse(data)))
-      .catch(error => console.error('Error fetching JSON data:', error));
+        const response2 = await fetch('http://localhost:5000/get_table');
+        const jsonData = await response2.json();
+        setJsonData(jsonData);
+        setLoading(false);
+      } catch (error) {
+        setError(error);
+        setLoading(false);
+      }
+    };
+
+    fetchData();
   }, []);
 
-  console.log(jsonData);
   return (
     <div>
       <h2>Data from Flask API:</h2>
-      <p>{data}</p>
-
-      <h2>JSON Object as a Table:</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Category</th>
-            <th>Subcategory</th>
-            <th>Score</th>
-          </tr>
-        </thead>
-        <tbody>
-          {Object.keys(jsonData).map((category) => (
-            jsonData[category].map(([subcategory, score]) => (
-              <tr key={subcategory}>
-                <td>{category}</td>
-                <td>{subcategory}</td>
-                <td>{score}</td>
-              </tr>
-            ))
-          ))}
-        </tbody>
-      </table>
+      {loading && <LoadingIndicator />}
+      {error && <ErrorDisplay error={error} />}
+      {!loading && !error && (
+        <div>
+          <TableComponent data={jsonData} />
+        </div>
+      )}
     </div>
   );
 };
