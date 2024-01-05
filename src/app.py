@@ -147,12 +147,6 @@ excel_ratios = extract_data_from_excel(excel_file_path)
 
 updated_class_map_json = update_class_map_with_ratios(class_map, excel_ratios)
 
-#updated_class_map = json.loads(updated_class_map_json)
-# for i in updated_class_map:
-#     print("\n", i, " : ")
-#     for j in updated_class_map[i]:
-#         print(j)
-
 res = return_totalValue(updated_class_map_json)
 
 @app.route('/get_data', methods=['GET'])

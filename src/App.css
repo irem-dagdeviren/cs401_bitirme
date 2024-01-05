@@ -11,3 +11,27 @@
   color: #dc3545;
   margin: 20px 0;
 }
+
+/* Add this to your CSS file or component */
+div {
+  border: 1px solid #ccc;
+  /* Add a border for visibility */
+  margin: 10px;
+  /* Add margin for spacing */
+  padding: 10px;
+  /* Add padding for content spacing */
+  cursor: pointer;
+  /* Add pointer cursor for clickable effect */
+}
+
+ul {
+  list-style: none;
+  /* Remove default list styles */
+  padding: 0;
+  /* Remove default padding */
+}
+
+li {
+  margin-bottom: 5px;
+  /* Add margin between list items */
+}
