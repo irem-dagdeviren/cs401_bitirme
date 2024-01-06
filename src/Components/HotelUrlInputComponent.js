@@ -1,18 +1,17 @@
 import React, { useState } from 'react';
 
-const HotelUrlInputComponenet = ({ inputValue, setInputValue, buttonClicked, setButtonClicked }) => {
+const HotelUrlInputComponenet = ({ inputValue, setInputValue }) => {
 
     const handleInputChange = (event) => {
-        if (!buttonClicked) {
-            setInputValue(event.target.value);
-            setButtonClicked(false);
+        setInputValue(event.target.value);
 
-        }
+
+
     };
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        setButtonClicked(true);
+
     };
 
     return (
@@ -28,7 +27,7 @@ const HotelUrlInputComponenet = ({ inputValue, setInputValue, buttonClicked, set
                 />
             </div>
             <button type="submit" className="btn btn-primary">Submit</button>
-            {buttonClicked && <label className="mt-3 d-block">You entered: {inputValue}</label>}
+            <label className="mt-3 d-block">You entered: {inputValue}</label>
         </form>
     );
 };

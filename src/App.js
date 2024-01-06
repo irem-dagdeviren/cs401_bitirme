@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import './App.css';
 import TableAsCards from './Components/TableAsCards';
 import HotelUrlInputComponenet from './Components/HotelUrlInputComponent';
@@ -18,7 +17,6 @@ const DataTable = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [inputValue, setInputValue] = useState('');
-  const [buttonClicked, setButtonClicked] = useState(false);
 
 
   useEffect(() => {
@@ -47,26 +45,24 @@ const DataTable = () => {
       <HotelUrlInputComponenet
         inputValue={inputValue}
         setInputValue={setInputValue}
-        buttonClicked={buttonClicked}
-        setButtonClicked={setButtonClicked}
+
       />
 
       {/* gelen input value yu python koduna gönder  */}
-      {buttonClicked &&
-        <div>
-          <ShowResultComponent data={data} />
-          <h2>Details:</h2>
-          {loading &&
-            <RingLoader css={'display: block; margin: 0 auto;'} size={150} color={'#36D7B7'} loading={loading} />
-          }
-          {error && <ErrorDisplay error={error} />}
-          {!loading && !error && (
-            <div>
-              <TableAsCards data={jsonData} />
-            </div>
-          )}
-        </div>
-      }
+      <div>
+        <ShowResultComponent data={data} />
+        <h2>Details:</h2>
+        {loading &&
+          <RingLoader css={'display: block; margin: 0 auto;'} size={150} color={'#36D7B7'} loading={loading} />
+        }
+        {error && <ErrorDisplay error={error} />}
+        {!loading && !error && (
+          <div>
+            <TableAsCards data={jsonData} />
+          </div>
+        )}
+      </div>
+
     </div>
   );
 };
