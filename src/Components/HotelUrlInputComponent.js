@@ -1,16 +1,18 @@
 import React, { useState } from 'react';
 
-const HotelUrlInputComponenet = ({ inputValue, setInputValue, onInputChange }) => {
-    const [buttonClicked, setButtonClicked] = useState(false);
+const HotelUrlInputComponenet = ({ inputValue, setInputValue, buttonClicked, setButtonClicked }) => {
 
     const handleInputChange = (event) => {
-        setInputValue(event.target.value);
-        onInputChange(event.target.value);
+        if (!buttonClicked) {
+            setInputValue(event.target.value);
+            setButtonClicked(false);
+
+        }
     };
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        buttonClicked ? setButtonClicked(false) : setButtonClicked(true);
+        setButtonClicked(true);
     };
 
     return (
@@ -21,7 +23,6 @@ const HotelUrlInputComponenet = ({ inputValue, setInputValue, onInputChange }) =
                     type="text"
                     className="form-control"
                     id="hotelUrl"
-                    value={inputValue}
                     onChange={handleInputChange}
                     placeholder="Enter Hotel URL"
                 />

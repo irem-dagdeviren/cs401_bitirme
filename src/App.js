@@ -8,60 +8,9 @@ import ShowResultComponent from './Components/ShowResultComponent';
 import { RingLoader } from 'react-spinners';
 
 
-const LoadingIndicator = () => <div className="loading">Loading...</div>;
 
 const ErrorDisplay = ({ error }) => <div className="error">Error: {error.message}</div>;
 
-// const HotelUrlInputComponenet = ({ setHotelUrl, setHotelName }) => {
-//   const [inputValue, setInputValue] = useState('');
-
-//   const handleInputChange = (event) => {
-//     setInputValue(event.target.value);
-//   };
-
-//   const handleSubmit = (event) => {
-//     event.preventDefault();
-//     setHotelUrl(inputValue);
-//     setHotelName(inputValue.split('/')[4]);
-//   };
-
-//   return (
-//     <form onSubmit={handleSubmit}>
-//       <label>
-//         Hotel URL:
-//         <input type="text" value={inputValue} onChange={handleInputChange} />
-//       </label>
-//       <input type="submit" value="Submit" />
-//     </form>
-//   );
-// };
-
-// const CategoryCard = ({ category, subcategories }) => (
-//   <div className="card">
-//     <div className="card-body">
-//       <h5 className="card-title">{category}</h5>
-//       <ul>
-//         {subcategories.map((subcategory, index) => (
-//           <li key={index}>
-//             <strong>Subcategory:</strong> {subcategory[0]}, <strong>Score:</strong> {subcategory[1]}
-//           </li>
-//         ))}
-//       </ul>
-//     </div>
-//   </div>
-// );
-
-// const TableAsCards = ({ data }) => (
-//   <div className="card-deck">
-//     {Object.keys(data).map((category) => (
-//       <CategoryCard
-//         key={category}
-//         category={category}
-//         subcategories={data[category]}
-//       />
-//     ))}
-//   </div>
-// );
 
 const DataTable = () => {
   const [data, setData] = useState([]);
@@ -69,6 +18,7 @@ const DataTable = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [inputValue, setInputValue] = useState('');
+  const [buttonClicked, setButtonClicked] = useState(false);
 
 
   useEffect(() => {
@@ -90,30 +40,33 @@ const DataTable = () => {
 
     fetchData();
   }, []);
-  const handleInputChange = async (inputValue) => {
-    setInputValue(inputValue);
-    console.log(inputValue);
-  }
+
 
   return (
     <div>
       <HotelUrlInputComponenet
-        onInputChange={handleInputChange}
         inputValue={inputValue}
         setInputValue={setInputValue}
+        buttonClicked={buttonClicked}
+        setButtonClicked={setButtonClicked}
       />
+
       {/* gelen input value yu python koduna gönder  */}
-      <ShowResultComponent data={data} />
-      <h2>Details:</h2>
-      {loading &&
-        <RingLoader css={'display: block; margin: 0 auto;'} size={150} color={'#36D7B7'} loading={loading} />
-      }
-      {error && <ErrorDisplay error={error} />}
-      {!loading && !error && (
+      {buttonClicked &&
         <div>
-          <TableAsCards data={jsonData} />
+          <ShowResultComponent data={data} />
+          <h2>Details:</h2>
+          {loading &&
+            <RingLoader css={'display: block; margin: 0 auto;'} size={150} color={'#36D7B7'} loading={loading} />
+          }
+          {error && <ErrorDisplay error={error} />}
+          {!loading && !error && (
+            <div>
+              <TableAsCards data={jsonData} />
+            </div>
+          )}
         </div>
-      )}
+      }
     </div>
   );
 };
