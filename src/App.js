@@ -4,6 +4,9 @@ import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import './App.css';
 import TableAsCards from './Components/TableAsCards';
 import HotelUrlInputComponenet from './Components/HotelUrlInputComponent';
+import ShowResultComponent from './Components/ShowResultComponent';
+import { RingLoader } from 'react-spinners';
+
 
 const LoadingIndicator = () => <div className="loading">Loading...</div>;
 
@@ -65,6 +68,7 @@ const DataTable = () => {
   const [jsonData, setJsonData] = useState({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [inputValue, setInputValue] = useState('');
 
 
   useEffect(() => {
@@ -87,20 +91,23 @@ const DataTable = () => {
     fetchData();
   }, []);
   const handleInputChange = async (inputValue) => {
+    setInputValue(inputValue);
+    console.log(inputValue);
   }
 
   return (
     <div>
-      <label>Hotel URL</label>
-      <HotelUrlInputComponenet onInputChange={handleInputChange} />
-
+      <HotelUrlInputComponenet
+        onInputChange={handleInputChange}
+        inputValue={inputValue}
+        setInputValue={setInputValue}
+      />
       {/* gelen input value yu python koduna gönder  */}
-
-
-      <h1>Total Point</h1>
-      <h2>{data}</h2>
-      <h2>Data from Flask API:</h2>
-      {loading && <LoadingIndicator />}
+      <ShowResultComponent data={data} />
+      <h2>Details:</h2>
+      {loading &&
+        <RingLoader css={'display: block; margin: 0 auto;'} size={150} color={'#36D7B7'} loading={loading} />
+      }
       {error && <ErrorDisplay error={error} />}
       {!loading && !error && (
         <div>
@@ -110,5 +117,6 @@ const DataTable = () => {
     </div>
   );
 };
+
 
 export default DataTable;

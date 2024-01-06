@@ -156,7 +156,7 @@ def get_data():
     return jsonify({'data': data})
 
 @app.route('/get_table', methods=['GET'])
-def get_data_by_name():
+def get_table():
 
     data = updated_class_map_json
     return data
