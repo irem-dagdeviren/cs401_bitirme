@@ -14,7 +14,7 @@
 
 /* Add this to your CSS file or component */
 div {
-  border: 1px solid #ccc;
+  border: none;
   /* Add a border for visibility */
   margin: 10px;
   /* Add margin for spacing */
@@ -34,4 +34,30 @@ ul {
 li {
   margin-bottom: 5px;
   /* Add margin between list items */
+}
+
+/* Add this CSS to your stylesheets */
+
+.card {
+  margin-bottom: 20px;
+  border: none;
+  /* Adjust the margin as needed */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Optional: Add a box shadow for a card-like appearance */
+}
+
+.card-body {
+  padding: 1.25rem;
+  /* Adjust the padding as needed */
+}
+
+.card-title {
+  font-size: 1.25rem;
+  border: none;
+  margin-bottom: 0.75rem;
+}
+
+.card-text {
+  border: none;
+  margin-bottom: 0;
 }
