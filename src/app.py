@@ -43,7 +43,7 @@ def create_class_map(ontology):
         individual = list(mnc.instances())
         values = set()
         for individuals in individual:
-            values.add((individuals.name, 0))
+            values.add((individuals.name.lower(), 0))
         class_map[mnc.name] = values
     return class_map
 
@@ -90,7 +90,7 @@ def update_class_map(urls, ontology, class_map):
             class_indicators = {}
 
             for mnc in onto.classes():
-               # print(mnc.name)
+               
                 individual = list(mnc.instances())
                 updated_values_set = set()
                 for individuals in individual:
@@ -107,11 +107,10 @@ def update_class_map(urls, ontology, class_map):
                         val = find_elements_with_keyword(soup, str(individuals.name).lower())
                         indicator = 1 if val else 0
                         class_indicators[individuals.name] = {
-                            'indicator': indicator,
-                        }
+                            'indicator': indicator,                        }
                         if (indicator == 1):
-                            update_dictionary(class_map, mnc.name, individuals.name, indicator)
-                            individuals.name.lower()
+                            print( mnc.name, individuals.name)                          
+                            update_dictionary(class_map, mnc.name, individuals.name.lower(), indicator)
                             continue
 
                     element = soup.find(lambda tag: individuals.name.lower() in str(tag).lower())
@@ -160,10 +159,9 @@ def update_class_map_with_ratios(class_map, excel_ratios):
     for class_name, values in class_map.items():
         updated_values = set()
         for entry in values:
-            # print(entry)
+            print(entry)
             name, current_value = entry
             if name in excel_ratios:
-                print("name: ", name)
                 ratio = excel_ratios[name]
                 updated_value = current_value * ratio
                 updated_values.add((name, round(updated_value,2)))
