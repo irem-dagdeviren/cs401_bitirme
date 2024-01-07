@@ -4,6 +4,7 @@ from bs4 import BeautifulSoup
 from urllib.parse import urljoin
 import openpyxl
 import json
+from langdetect import detect
 
 
 def update_dictionary(dictionary, category, element, new_value):
@@ -42,6 +43,33 @@ def create_class_map(ontology):
     return class_map
 
 
+def detectLanguages(soup):
+    # Find elements with class names containing "language"
+    # elements_with_language_class = soup.find_all(class_=lambda x: x and 'language' in x)
+
+    # # Iterate through the matching elements and check child elements for the keyword
+    # for element in elements_with_language_class:
+    #     # Check if the element has child elements
+    #     if element.find_all(True):
+    #         # Iterate through the child elements
+    #         for child_element in element.find_all(True):
+    #             # Check if the child element contains the keyword
+    #             if keyword in child_element.get_text():
+    #                 # Perform your desired action, e.g., print the parent element
+    #                 print("Found keyword in parent element:", element)
+    try:
+        text_content = soup.get_text()
+        # Detect the language of the extracted text
+        language = detect(text_content)   
+        return language
+    except Exception as e:
+        print(f"Error: {e}")
+        return None
+
+def checkSecurity(url):
+    return url.startswith("https")
+
+
 def update_class_map(urls, ontology, class_map):
     for url in urls:
         if url.endswith(".jpg"):
@@ -62,6 +90,25 @@ def update_class_map(urls, ontology, class_map):
                 individual = list(mnc.instances())
                 updated_values_set = set()
                 for individuals in individual:
+                    if(mnc.name == "Language"):
+                        lang = detectLanguages(soup) == individuals.name
+                        indicator = 1 if lang else 0
+                        class_indicators[individuals.name] = {
+                        'indicator': indicator,
+                    }
+                    if (indicator == 1):
+                        update_dictionary(class_map, mnc.name, individuals.name, indicator)
+
+                        continue
+                    if(mnc.name == "Certificate"):
+                        val = checkSecurity(url)
+                        indicator = 1 if val else 0
+                        class_indicators[individuals.name] = {
+                        'indicator': indicator,
+                    }
+                        if (indicator == 1):
+                            update_dictionary(class_map, mnc.name, individuals.name, indicator)
+                            continue
                     element = soup.find(lambda tag: individuals.name.lower() in str(tag).lower())
                     indicator = 1 if element else 0
 
@@ -76,6 +123,7 @@ def update_class_map(urls, ontology, class_map):
             #    print("\n", i, " : ", class_map[i])
         except:
             null = 0
+
 
 
 def extract_data_from_excel(excel_file_path):

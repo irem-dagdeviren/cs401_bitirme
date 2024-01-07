@@ -6,6 +6,7 @@ from bs4 import BeautifulSoup
 from urllib.parse import urljoin
 import openpyxl
 import json
+from langdetect import detect   
 
 
 app = Flask(__name__)
@@ -46,14 +47,40 @@ def create_class_map(ontology):
         class_map[mnc.name] = values
     return class_map
 
+def detectLanguages(soup):
+    try:
+        text_content = soup.get_text()
+        # Detect the language of the extracted text
+        language = detect(text_content)   
+        print(language)
+        return language
+    except Exception as e:
+        print(f"Error: {e}")
+        return None
+  
+
+def find_elements_with_keyword(soup, target):
+    target_string = "language"
+    # Find all elements with class names containing the target string
+    elements_with_language_class = soup.find_all(class_=lambda x: x and target_string.lower() in x.lower())
+    # Iterate through the matching elements and check child elements for the keyword
+    for element in elements_with_language_class:
+        if target.lower() in str(element).lower():
+            print("Found keyword in parent element:", target)
+            return True
+
+def checkSecurity(url):
+    return url.startswith("https:")
 
 def update_class_map(urls, ontology, class_map):
     for url in urls:
+        print(str(url))
         if url.endswith(".jpg"):
             continue
         try:
             response = requests.get(url)
             soup = BeautifulSoup(response.text, 'html.parser')
+            #detectLanguages(soup)
             all_class = ontology.classes()
 
             class_names = [cls.name.split('.')[-1] for cls in all_class]
@@ -63,10 +90,30 @@ def update_class_map(urls, ontology, class_map):
             class_indicators = {}
 
             for mnc in onto.classes():
-
+               # print(mnc.name)
                 individual = list(mnc.instances())
                 updated_values_set = set()
                 for individuals in individual:
+                    if(str(mnc.name) == "Certificates"):
+                        val = checkSecurity(url)
+                        indicator = 1 if val else 0
+                        class_indicators[individuals.name] = {
+                        'indicator': indicator,
+                    }
+                        if (indicator == 1):
+                            update_dictionary(class_map, mnc.name, individuals.name, indicator)
+                            continue
+                    if(str(mnc.name).lower() == "language"):
+                        val = find_elements_with_keyword(soup, str(individuals.name).lower())
+                        indicator = 1 if val else 0
+                        class_indicators[individuals.name] = {
+                            'indicator': indicator,
+                        }
+                        if (indicator == 1):
+                            update_dictionary(class_map, mnc.name, individuals.name, indicator)
+                            individuals.name.lower()
+                            continue
+
                     element = soup.find(lambda tag: individuals.name.lower() in str(tag).lower())
                     indicator = 1 if element else 0
 
@@ -76,8 +123,8 @@ def update_class_map(urls, ontology, class_map):
                     if (indicator == 1):
                         update_dictionary(class_map, mnc.name, individuals.name, indicator)
 
-           # print("Updated class_map:")
-           # for i in class_map:
+            # print("Updated class_map:")
+            # for i in class_map:
             #    print("\n", i, " : ", class_map[i])
         except:
             null = 0
@@ -112,15 +159,16 @@ def set_encoder(obj):
 def update_class_map_with_ratios(class_map, excel_ratios):
     for class_name, values in class_map.items():
         updated_values = set()
-        
         for entry in values:
+            # print(entry)
             name, current_value = entry
             if name in excel_ratios:
+                print("name: ", name)
                 ratio = excel_ratios[name]
                 updated_value = current_value * ratio
                 updated_values.add((name, round(updated_value,2)))
         class_map[class_name] = updated_values
-   
+    print("Updated class_map:", class_map)
     json_string = json.dumps(class_map, default=set_encoder, indent=2)
 
     return json_string
@@ -135,7 +183,8 @@ def return_totalValue(class_map_json):
     print("Total Value: ", round(totalValue,2))        
     return round(totalValue,2)
 
-target_url = "http://amorehotelistanbul.com/"
+target_url = "https://crownedhotel.com/index.php"
+
 urls = get_all_links(target_url)
 onto = get_ontology("deneme.rdf").load()
 
