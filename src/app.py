@@ -48,23 +48,35 @@ def create_class_map(ontology):
     return class_map
   
 
-def find_elements_with_keyword(soup, target):
+def find_elements_language(soup, target):
     target_string = "language"
     # Find all elements with class names containing the target string
     elements_with_language_class = soup.find_all(class_=lambda x: x and target_string.lower() in x.lower())
     # Iterate through the matching elements and check child elements for the keyword
     for element in elements_with_language_class:
         if target.lower() in str(element).lower():
-            print("Found keyword in parent element:", target)
+            print("Found keyword in language element:", target)
             return True
 
+def find_elements_currency(soup, target):
+    target_string = "currency"
+    # Find all elements with class names containing the target string
+    elements_with_language_class = soup.find_all(class_=lambda x: x and target_string.lower() in x.lower())
+    # Iterate through the matching elements and check child elements for the keyword
+    for element in elements_with_language_class:
+        if target.lower() in str(element).lower():
+            print("Found keyword in currency element:", target)
+            return True
 
-def update_class_map(urls, ontology, class_map):
+def update_class_map(targeturl, urls, ontology, class_map):
     for url in urls:
-        print(str(url))
         if url.endswith(".jpg"):
             continue
+        if not url.startswith(targeturl[:20]):
+            continue
         try:
+            print(str(url))
+
             response = requests.get(url)
             soup = BeautifulSoup(response.text, 'html.parser')
             
@@ -85,8 +97,10 @@ def update_class_map(urls, ontology, class_map):
                         continue
                         
                     if(str(mnc.name).lower() == "language"):
-                        element = find_elements_with_keyword(soup, str(individuals.name).lower())
-                        
+                        element = find_elements_language(soup, str(individuals.name).lower())
+
+                    if(str(mnc.name).lower() == "currency"):
+                        element = find_elements_currency(soup, str(individuals.name).lower())
                     else:           
                         element = soup.find(lambda tag: individuals.name.lower() in str(tag).lower())
 
@@ -130,7 +144,6 @@ def update_class_map_with_ratios(class_map, excel_ratios):
     for class_name, values in class_map.items():
         updated_values = set()
         for entry in values:
-            print(entry)
             name, current_value = entry
             if name in excel_ratios:
                 ratio = excel_ratios[name]
@@ -159,14 +172,14 @@ def update_security_check(security_status, class_map):
     update_dictionary(class_map, "Certificates", "certificate", 1 if security_status else 0)
 
 #TAKE URL FROM USER AND CHECK SECURITY
-target_url = "http://www.hotelilicak.com/index.php"
+target_url = "http://www.hotelobahan.com/"
 security_status = checkSecurity(target_url)
 urls = get_all_links(target_url)
 
 #TAKE ONTOLOGY AND CREATE CLASS MAP
 onto = get_ontology("deneme.rdf").load()
 class_map = create_class_map(onto)
-update_class_map(urls, onto, class_map)
+update_class_map(target_url, urls, onto, class_map)
 
 #TAKE EXCEL FILE
 excel_file_path = 'grades.xlsx'
