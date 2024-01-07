@@ -46,17 +46,6 @@ def create_class_map(ontology):
             values.add((individuals.name.lower(), 0))
         class_map[mnc.name] = values
     return class_map
-
-def detectLanguages(soup):
-    try:
-        text_content = soup.get_text()
-        # Detect the language of the extracted text
-        language = detect(text_content)   
-        print(language)
-        return language
-    except Exception as e:
-        print(f"Error: {e}")
-        return None
   
 
 def find_elements_with_keyword(soup, target):
@@ -108,11 +97,10 @@ def update_class_map(urls, ontology, class_map):
                         indicator = 1 if val else 0
                         class_indicators[individuals.name] = {
                             'indicator': indicator,                        }
-                        if (indicator == 1):
-                            print( mnc.name, individuals.name)                          
+                        if (indicator == 1):                     
                             update_dictionary(class_map, mnc.name, individuals.name.lower(), indicator)
                             continue
-
+                                
                     element = soup.find(lambda tag: individuals.name.lower() in str(tag).lower())
                     indicator = 1 if element else 0
 
@@ -181,7 +169,7 @@ def return_totalValue(class_map_json):
     print("Total Value: ", round(totalValue,2))        
     return round(totalValue,2)
 
-target_url = "https://crownedhotel.com/index.php"
+target_url = "http://www.hotelilicak.com/index.php"
 
 urls = get_all_links(target_url)
 onto = get_ontology("deneme.rdf").load()

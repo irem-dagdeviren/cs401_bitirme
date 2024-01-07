@@ -185,6 +185,22 @@
     
 
 
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#Español -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#Español">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/Language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#Italiano -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#Italiano">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/Language"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#TL -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#TL">
@@ -295,9 +311,7 @@
 
     <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#ar -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#ar">
-        <rdf:type rdf:resource="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/Language"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#ar"/>
     
 
 
@@ -614,7 +628,6 @@
     <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#es -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#es">
-        <rdf:type rdf:resource="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/Language"/>
         <owl:sameAs rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#hi"/>
     </owl:NamedIndividual>
     
@@ -832,9 +845,7 @@
 
     <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#it -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#it">
-        <rdf:type rdf:resource="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/Language"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#it"/>
     
 
 
@@ -1378,6 +1389,14 @@
     <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#Русский -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#Русский">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/Language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#عربي -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#عربي">
         <rdf:type rdf:resource="http://www.semanticweb.org/kronos/ontologies/2023/10/untitled-ontology-3/Language"/>
     </owl:NamedIndividual>
 </rdf:RDF>
