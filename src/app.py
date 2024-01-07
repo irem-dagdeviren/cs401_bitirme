@@ -58,8 +58,6 @@ def find_elements_with_keyword(soup, target):
             print("Found keyword in parent element:", target)
             return True
 
-def checkSecurity(url):
-    return url.startswith("https:")
 
 def update_class_map(urls, ontology, class_map):
     for url in urls:
@@ -69,7 +67,7 @@ def update_class_map(urls, ontology, class_map):
         try:
             response = requests.get(url)
             soup = BeautifulSoup(response.text, 'html.parser')
-            #detectLanguages(soup)
+            
             all_class = ontology.classes()
 
             class_names = [cls.name.split('.')[-1] for cls in all_class]
@@ -83,36 +81,21 @@ def update_class_map(urls, ontology, class_map):
                 individual = list(mnc.instances())
                 updated_values_set = set()
                 for individuals in individual:
-                    if(str(mnc.name) == "Certificates"):
-                        val = checkSecurity(url)
-                        indicator = 1 if val else 0
-                        class_indicators[individuals.name] = {
-                        'indicator': indicator,
-                    }
-                        if (indicator == 1):
-                            update_dictionary(class_map, mnc.name, individuals.name, indicator)
-                            continue
+                    if(str(mnc.name).lower() == "certificates"):
+                        continue
+                        
                     if(str(mnc.name).lower() == "language"):
-                        val = find_elements_with_keyword(soup, str(individuals.name).lower())
-                        indicator = 1 if val else 0
-                        class_indicators[individuals.name] = {
-                            'indicator': indicator,                        }
-                        if (indicator == 1):                     
-                            update_dictionary(class_map, mnc.name, individuals.name.lower(), indicator)
-                            continue
-                                
-                    element = soup.find(lambda tag: individuals.name.lower() in str(tag).lower())
-                    indicator = 1 if element else 0
+                        element = find_elements_with_keyword(soup, str(individuals.name).lower())
+                        
+                    else:           
+                        element = soup.find(lambda tag: individuals.name.lower() in str(tag).lower())
 
+                    indicator = 1 if element else 0
                     class_indicators[individuals.name] = {
                         'indicator': indicator,
                     }
                     if (indicator == 1):
-                        update_dictionary(class_map, mnc.name, individuals.name, indicator)
-
-            # print("Updated class_map:")
-            # for i in class_map:
-            #    print("\n", i, " : ", class_map[i])
+                        update_dictionary(class_map, mnc.name, individuals.name.lower(), indicator)
         except:
             null = 0
 
@@ -169,25 +152,39 @@ def return_totalValue(class_map_json):
     print("Total Value: ", round(totalValue,2))        
     return round(totalValue,2)
 
+def checkSecurity(url):
+    return url.startswith("https:")
+
+def update_security_check(security_status, class_map):
+    update_dictionary(class_map, "Certificates", "certificate", 1 if security_status else 0)
+
+#TAKE URL FROM USER AND CHECK SECURITY
 target_url = "http://www.hotelilicak.com/index.php"
-
+security_status = checkSecurity(target_url)
 urls = get_all_links(target_url)
-onto = get_ontology("deneme.rdf").load()
 
+#TAKE ONTOLOGY AND CREATE CLASS MAP
+onto = get_ontology("deneme.rdf").load()
 class_map = create_class_map(onto)
 update_class_map(urls, onto, class_map)
 
+#TAKE EXCEL FILE
 excel_file_path = 'grades.xlsx'
 excel_ratios = extract_data_from_excel(excel_file_path)
 
+#UPDATE SECURITY FEATURE
+update_security_check(security_status, class_map)
+
+#UPDATE CLASS MAP WITH RATIOS
 updated_class_map_json = update_class_map_with_ratios(class_map, excel_ratios)
 
-res = return_totalValue(updated_class_map_json)
+#CALCULATE TOTAL VALUE
+total_value = return_totalValue(updated_class_map_json)
 
 @app.route('/get_data', methods=['GET'])
 def get_data():
 
-    data = res
+    data = total_value
     return jsonify({'data': data})
 
 @app.route('/get_table', methods=['GET'])
