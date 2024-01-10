@@ -5,8 +5,6 @@ const HotelUrlInputComponenet = ({ inputValue, setInputValue }) => {
     const handleInputChange = (event) => {
         setInputValue(event.target.value);
 
-
-
     };
 
     const handleSubmit = (event) => {

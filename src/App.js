@@ -41,17 +41,18 @@ const DataTable = () => {
 
 
   return (
-    <div>
-      <HotelUrlInputComponenet
-        inputValue={inputValue}
-        setInputValue={setInputValue}
+    // <div>
+    //   <HotelUrlInputComponenet
+    //     inputValue={inputValue}
+    //     setInputValue={setInputValue}
 
-      />
+    //   />
+    <div>
+      <h1>Hotel website Assessent Tool Results</h1>
 
       {/* gelen input value yu python koduna gönder  */}
       <div>
-        {/* <ShowResultComponent data={data} />
-        <h2>Details:</h2> */}
+
         {loading &&
           <RingLoader css={'display: block; margin: 0 auto;'} size={150} color={'#36D7B7'} loading={loading} />
         }

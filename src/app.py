@@ -174,7 +174,7 @@ def update_security_check(security_status, class_map):
 
 #TAKE URL FROM USER AND CHECK SECURITY
 #target_url = "http://amorehotelistanbul.com/"
-target_url = "http://www.hotelilicak.com/index.php"
+#target_url = "http://www.hotelilicak.com/index.php"
 #target_url = "https://crownedhotel.com/index.php/en/"
 #target_url = "http://dempahotel.com/index.html"
 #target_url = "http://www.hotelobahan.com/"
@@ -184,6 +184,33 @@ target_url = "http://www.hotelilicak.com/index.php"
 #target_url = "https://cekmekoyotel.com/"
 #target_url = "https://www.eresin.com.tr/"
 #target_url = "https://www.hotelbeyce.com/tr"
+
+
+
+
+@app.route('/get_url', methods=['POST'])
+def get_url():
+    while True:
+        target_url = input('Enter a URL: ')
+        if target_url:
+            print("Target URL: ", target_url)
+            return target_url
+        else:
+            print("Invalid URL. Please enter a valid URL.")
+
+@app.route('/get_data', methods=['GET'])
+def get_data():
+
+    data = total_value
+    return jsonify({'data': data})
+
+@app.route('/get_table', methods=['GET'])
+def get_table():
+
+    data = updated_class_map_json
+    return data
+
+target_url = get_url()
 security_status = checkSecurity(target_url)
 urls = get_all_links(target_url)
 
@@ -204,18 +231,5 @@ updated_class_map_json = update_class_map_with_ratios(class_map, excel_ratios)
 
 #CALCULATE TOTAL VALUE
 total_value = return_totalValue(updated_class_map_json)
-
-@app.route('/get_data', methods=['GET'])
-def get_data():
-
-    data = total_value
-    return jsonify({'data': data})
-
-@app.route('/get_table', methods=['GET'])
-def get_table():
-
-    data = updated_class_map_json
-    return data
-
 if __name__ == '__main__':
     app.run(debug=True)
