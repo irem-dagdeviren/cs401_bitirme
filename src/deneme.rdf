@@ -545,7 +545,9 @@
 
     <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#cookie_policy -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#cookie_policy"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#cookie_policy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#Hotel_Policies"/>
+    </owl:NamedIndividual>
     
 
 
@@ -1069,6 +1071,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#privacy_policy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#privacy_policy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#Hotel_Policies"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#privacypolicy -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#privacypolicy">
@@ -1257,6 +1267,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#survey -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#survey">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#Form"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#tel -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#tel">
@@ -1356,6 +1374,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#weather -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#weather">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#User_Experience"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#whatsapp -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#whatsapp">
@@ -1366,17 +1392,13 @@
 
     <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#wheather -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#wheather">
-        <rdf:type rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#User_Experience"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#wheather"/>
     
 
 
     <!-- http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#wheatherforecast -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#wheatherforecast">
-        <rdf:type rdf:resource="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#User_Experience"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iremd/ontologies/2023/11/untitled-ontology-3#wheatherforecast"/>
     
 
 

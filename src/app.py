@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup
 from urllib.parse import urljoin
 import openpyxl
 import json
-from langdetect import detect   
+import csv
 
 
 app = Flask(__name__)
@@ -50,23 +50,18 @@ def create_class_map(ontology):
 
 def find_elements_language(soup, target):
     target_string = "language"
-    # Find all elements with class names containing the target string
     elements_with_language_class = soup.find_all(class_=lambda x: x and target_string.lower() in x.lower())
-    # Iterate through the matching elements and check child elements for the keyword
     for element in elements_with_language_class:
         if target.lower() in str(element).lower():
-            print("Found keyword in language element:", target)
             return True
 
 def find_elements_currency(soup, target):
     target_string = "currency"
-    # Find all elements with class names containing the target string
     elements_with_language_class = soup.find_all(class_=lambda x: x and target_string.lower() in x.lower())
-    # Iterate through the matching elements and check child elements for the keyword
     for element in elements_with_language_class:
         if target.lower() in str(element).lower():
-            print("Found keyword in currency element:", target)
             return True
+
 
 def update_class_map(targeturl, urls, ontology, class_map):
     for url in urls:
@@ -100,7 +95,8 @@ def update_class_map(targeturl, urls, ontology, class_map):
                         element = find_elements_language(soup, str(individuals.name).lower())
 
                     if(str(mnc.name).lower() == "currency"):
-                        element = find_elements_currency(soup, str(individuals.name).lower())
+                        element = find_elements_currency(soup, str(individuals.name).lower())                            
+
                     else:           
                         element = soup.find(lambda tag: individuals.name.lower() in str(tag).lower())
 
@@ -150,7 +146,10 @@ def update_class_map_with_ratios(class_map, excel_ratios):
                 updated_value = current_value * ratio
                 updated_values.add((name, round(updated_value,2)))
         class_map[class_name] = updated_values
-    print("Updated class_map:", class_map)
+
+    print("Updated class_map:")
+    for i in class_map:
+        print("\n", i, " : ", class_map[i])
     json_string = json.dumps(class_map, default=set_encoder, indent=2)
 
     return json_string
@@ -165,6 +164,8 @@ def return_totalValue(class_map_json):
     print("Total Value: ", round(totalValue,2))        
     return round(totalValue,2)
 
+
+
 def checkSecurity(url):
     return url.startswith("https:")
 
@@ -172,7 +173,17 @@ def update_security_check(security_status, class_map):
     update_dictionary(class_map, "Certificates", "certificate", 1 if security_status else 0)
 
 #TAKE URL FROM USER AND CHECK SECURITY
-target_url = "http://www.hotelobahan.com/"
+#target_url = "http://amorehotelistanbul.com/"
+target_url = "http://www.hotelilicak.com/index.php"
+#target_url = "https://crownedhotel.com/index.php/en/"
+#target_url = "http://dempahotel.com/index.html"
+#target_url = "http://www.hotelobahan.com/"
+#target_url = "https://miapera.com/en"
+#target_url = "https://www.ottomanslifedeluxe.com/"
+#target_url = "https://www.katehotel.com.tr/"
+#target_url = "https://cekmekoyotel.com/"
+#target_url = "https://www.eresin.com.tr/"
+#target_url = "https://www.hotelbeyce.com/tr"
 security_status = checkSecurity(target_url)
 urls = get_all_links(target_url)
 

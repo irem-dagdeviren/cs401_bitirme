@@ -50,14 +50,16 @@ const DataTable = () => {
 
       {/* gelen input value yu python koduna gönder  */}
       <div>
-        <ShowResultComponent data={data} />
-        <h2>Details:</h2>
+        {/* <ShowResultComponent data={data} />
+        <h2>Details:</h2> */}
         {loading &&
           <RingLoader css={'display: block; margin: 0 auto;'} size={150} color={'#36D7B7'} loading={loading} />
         }
         {error && <ErrorDisplay error={error} />}
         {!loading && !error && (
           <div>
+            <ShowResultComponent data={data} />
+            <h2>Details:</h2>
             <TableAsCards data={jsonData} />
           </div>
         )}
