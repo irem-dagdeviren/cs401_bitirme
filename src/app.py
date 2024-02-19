@@ -67,12 +67,17 @@ def update_class_map(targeturl, urls, ontology, class_map):
     for url in urls:
         if url.endswith(".jpg"):
             continue
+        elif url.endswith(".pdf"):
+            continue
         if not url.startswith(targeturl[:20]):
             continue
         try:
             print(str(url))
 
             response = requests.get(url)
+            print(response.status_code)
+            if(response.status_code != 200):
+                continue
             soup = BeautifulSoup(response.text, 'html.parser')
             
             all_class = ontology.classes()
@@ -147,9 +152,9 @@ def update_class_map_with_ratios(class_map, excel_ratios):
                 updated_values.add((name, round(updated_value,2)))
         class_map[class_name] = updated_values
 
-    print("Updated class_map:")
-    for i in class_map:
-        print("\n", i, " : ", class_map[i])
+    # print("Updated class_map:")
+    # for i in class_map:
+    #     print("\n", i, " : ", class_map[i])
     json_string = json.dumps(class_map, default=set_encoder, indent=2)
 
     return json_string
@@ -161,7 +166,7 @@ def return_totalValue(class_map_json):
     for i in class_map:
         for j in class_map[i]:
             totalValue+=j[1]
-    print("Total Value: ", round(totalValue,2))        
+    #print("Total Value: ", round(totalValue,2))        
     return round(totalValue,2)
 
 
