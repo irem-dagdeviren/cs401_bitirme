@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request
+from flask import Flask, request
 from flask_cors import CORS
 from owlready2 import *
 import requests
@@ -90,7 +90,6 @@ def update_class_map(targeturl, urls, class_map,onto):
             for mnc in onto.classes():
                
                 individual = list(mnc.instances())
-                updated_values_set = set()
                 for individuals in individual:
                     if(str(mnc.name).lower() == "certificates"):
                         continue
