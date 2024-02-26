@@ -6,7 +6,6 @@ from bs4 import BeautifulSoup
 from urllib.parse import urljoin
 import openpyxl
 import json
-import csv
 
 
 app = Flask(__name__)
@@ -63,7 +62,7 @@ def find_elements_currency(soup, target):
             return True
 
 
-def update_class_map(targeturl, urls, ontology, class_map):
+def update_class_map(targeturl, urls, class_map,onto):
     for url in urls:
         if url.endswith(".jpg"):
             continue
@@ -80,7 +79,7 @@ def update_class_map(targeturl, urls, ontology, class_map):
                 continue
             soup = BeautifulSoup(response.text, 'html.parser')
             
-            all_class = ontology.classes()
+            all_class = onto.classes()
 
             class_names = [cls.name.split('.')[-1] for cls in all_class]
 
@@ -152,9 +151,6 @@ def update_class_map_with_ratios(class_map, excel_ratios):
                 updated_values.add((name, round(updated_value,2)))
         class_map[class_name] = updated_values
 
-    # print("Updated class_map:")
-    # for i in class_map:
-    #     print("\n", i, " : ", class_map[i])
     json_string = json.dumps(class_map, default=set_encoder, indent=2)
 
     return json_string
@@ -169,72 +165,46 @@ def return_totalValue(class_map_json):
     #print("Total Value: ", round(totalValue,2))        
     return round(totalValue,2)
 
-
-
 def checkSecurity(url):
     return url.startswith("https:")
 
 def update_security_check(security_status, class_map):
     update_dictionary(class_map, "Certificates", "certificate", 1 if security_status else 0)
 
-#TAKE URL FROM USER AND CHECK SECURITY
-#target_url = "http://amorehotelistanbul.com/"
-#target_url = "http://www.hotelilicak.com/index.php"
-#target_url = "https://crownedhotel.com/index.php/en/"
-#target_url = "http://dempahotel.com/index.html"
-#target_url = "http://www.hotelobahan.com/"
-#target_url = "https://miapera.com/en"
-#target_url = "https://www.ottomanslifedeluxe.com/"
-#target_url = "https://www.katehotel.com.tr/"
-#target_url = "https://cekmekoyotel.com/"
-#target_url = "https://www.eresin.com.tr/"
-#target_url = "https://www.hotelbeyce.com/tr"
+@app.route('/run-python-code')
+def run_python_code():
+    url = request.args.get('url')  # Get the URL parameter from the request
+    # Process the URL and return the result
+    target_url = url
+    security_status = checkSecurity(target_url)
+    urls = get_all_links(target_url)
+
+    #TAKE ONTOLOGY AND CREATE CLASS MAP
+    onto = get_ontology("deneme.rdf").load()
+    
+    class_map = create_class_map(onto)
+    update_class_map(target_url, urls, class_map,onto)
+
+    #TAKE EXCEL FILE
+    excel_file_path = 'grades.xlsx'
+    excel_ratios = extract_data_from_excel(excel_file_path)
 
 
+    #UPDATE SECURITY FEATURE
+    update_security_check(security_status, class_map)
 
+    #UPDATE CLASS MAP WITH RATIOS
+    updated_class_map_json = update_class_map_with_ratios(class_map, excel_ratios)
 
-@app.route('/get_url', methods=['POST'])
-def get_url():
-    while True:
-        target_url = input('Enter a URL: ')
-        if target_url:
-            print("Target URL: ", target_url)
-            return target_url
-        else:
-            print("Invalid URL. Please enter a valid URL.")
+    #CALCULATE TOTAL VALUE
+    total_value = return_totalValue(updated_class_map_json)
+    # print(updated_class_map_json)
 
-@app.route('/get_data', methods=['GET'])
-def get_data():
+    result = {
+        "total_value": total_value,
+        "updated_class_map_json": updated_class_map_json
+    }
+    return result
 
-    data = total_value
-    return jsonify({'data': data})
-
-@app.route('/get_table', methods=['GET'])
-def get_table():
-
-    data = updated_class_map_json
-    return data
-
-target_url = get_url()
-security_status = checkSecurity(target_url)
-urls = get_all_links(target_url)
-
-#TAKE ONTOLOGY AND CREATE CLASS MAP
-onto = get_ontology("deneme.rdf").load()
-class_map = create_class_map(onto)
-update_class_map(target_url, urls, onto, class_map)
-
-#TAKE EXCEL FILE
-excel_file_path = 'grades.xlsx'
-excel_ratios = extract_data_from_excel(excel_file_path)
-
-#UPDATE SECURITY FEATURE
-update_security_check(security_status, class_map)
-
-#UPDATE CLASS MAP WITH RATIOS
-updated_class_map_json = update_class_map_with_ratios(class_map, excel_ratios)
-
-#CALCULATE TOTAL VALUE
-total_value = return_totalValue(updated_class_map_json)
 if __name__ == '__main__':
     app.run(debug=True)
